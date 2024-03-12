@@ -1,9 +1,16 @@
 <template>
-  <div class="master"></div>
+  <div class="master">
+    <DesktopNavbar />
+    <main></main>
+  </div>
 </template>
 
 <script>
-export default {};
+import DesktopNavbar from "~/components/DesktopNavbar.vue";
+
+export default {
+  components: { DesktopNavbar },
+};
 </script>
 
 <style></style>
