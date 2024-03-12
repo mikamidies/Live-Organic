@@ -83,6 +83,11 @@ export default {};
 
 <style scoped>
 .wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
 }
 .top {
   background: var(--dark);

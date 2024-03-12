@@ -1,15 +1,18 @@
 <template>
   <div class="master">
     <DesktopNavbar />
-    <main></main>
+    <main>
+      <HomeHero />
+    </main>
   </div>
 </template>
 
 <script>
-import DesktopNavbar from "~/components/DesktopNavbar.vue";
+import DesktopNavbar from "@/components/DesktopNavbar.vue";
+import HomeHero from "@/components/HomePage/HomeHero.vue";
 
 export default {
-  components: { DesktopNavbar },
+  components: { DesktopNavbar, HomeHero },
 };
 </script>
 
