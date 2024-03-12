@@ -4,6 +4,7 @@
     <main>
       <HomeHero />
       <HomeAbout />
+      <HomeServices />
     </main>
   </div>
 </template>
@@ -12,9 +13,10 @@
 import DesktopNavbar from "@/components/DesktopNavbar.vue";
 import HomeHero from "@/components/HomePage/HomeHero.vue";
 import HomeAbout from "@/components/HomePage/HomeAbout.vue";
+import HomeServices from "@/components/HomePage/HomeServices.vue";
 
 export default {
-  components: { DesktopNavbar, HomeHero, HomeAbout },
+  components: { DesktopNavbar, HomeHero, HomeAbout, HomeServices },
 };
 </script>
 

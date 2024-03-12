@@ -44,7 +44,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--green);
+  background: rgb(221, 51, 51);
 }
 
 html {
@@ -184,4 +184,25 @@ input:focus {
 }
 .nuxt-link-exact-active {
   color: var(--green) !important;
+}
+.section__title {
+  color: var(--dark);
+  text-align: center;
+  font-family: var(--decor-sm);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 40px;
+  position: relative;
+}
+.section__title::after {
+  width: 40px;
+  height: 4px;
+  background: var(--green);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
 }
