@@ -36,6 +36,7 @@
   --green: #2d6a4f;
   --light: #d8f3dc;
   --dark: #081c15;
+  --red: rgb(221, 51, 51);
 }
 
 ::-webkit-scrollbar {
@@ -44,7 +45,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(221, 51, 51);
+  background: var(--red);
 }
 
 html {
