@@ -98,4 +98,9 @@ button {
   font-weight: 500;
   line-height: 150%; /* 24px */
 }
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 30px;
+  }
+}
 </style>

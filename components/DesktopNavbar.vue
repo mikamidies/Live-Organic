@@ -135,4 +135,25 @@ export default {};
   font-weight: 400;
   line-height: 150%; /* 27px */
 }
+@media screen and (max-width: 1024px) {
+  .right {
+    display: none;
+  }
+  .bottom {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: 0.4s;
+  }
+  .bottom ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .left img {
+    width: 120px;
+  }
+}
 </style>

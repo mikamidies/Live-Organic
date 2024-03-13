@@ -124,17 +124,17 @@ meter {
 .container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 4px;
+  padding-inline: 16px !important;
 }
 .container.medium {
   max-width: 1465px;
   margin: 0 auto;
-  padding: 0 4px;
+  padding-inline: 16px !important;
 }
 .container.small {
   max-width: 1330px;
   margin: 0 auto;
-  padding: 0 4px;
+  padding-inline: 16px !important;
 }
 p,
 ul,
@@ -206,4 +206,9 @@ input:focus {
   left: 50%;
   transform: translateX(-50%);
   content: "";
+}
+@media screen and (max-width: 1024px) {
+  .section__title {
+    font-size: 32px !important;
+  }
 }
