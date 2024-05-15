@@ -20,7 +20,7 @@
               Organic Certified Strawberries <br />
               From Mahabaleshwar!
             </h2>
-            <button>Contact Us!</button>
+            <button @click="scrollElement('contacts')">Contact Us!</button>
           </div>
         </div>
       </div>
@@ -36,9 +36,11 @@ export default {
   mounted() {
     new Swiper(this.$refs.swiper, {
       slidesPerView: 1,
-      // autoplay: {
-      //   delay: 2000,
-      // },
+      speed: 1000,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
     });
   },
 

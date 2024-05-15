@@ -62,7 +62,9 @@
         <div class="lang">
           <NuxtLink to="/">Ru</NuxtLink>
           <div class="chopstick"></div>
-          <NuxtLink to="/index-uz">Uz</NuxtLink>
+          <NuxtLink to="/">Uz</NuxtLink>
+          <div class="chopstick"></div>
+          <NuxtLink to="/">En</NuxtLink>
         </div>
       </div>
     </div>
@@ -197,7 +199,7 @@ export default {
 .lang a {
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 150%;
   cursor: pointer;
   color: var(--dark);

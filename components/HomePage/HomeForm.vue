@@ -6,10 +6,12 @@
         <h4 class="title">Contacts</h4>
         <div class="right">
           <div class="item">
-            <p class="sup">Head office:</p>
+            <p class="sup">Address:</p>
             <p class="value">
-              GAL Business Center- Galadari building 16, 1st floor, Office 69,
-              IMPZ, Dubai, P.O 7992.
+              «FOOD CITY TASHKENT» M
+              100053, тошкент шахар.
+              Бектемир тумани, Нурли йул МФИ
+              Мехнатобод кучаси-82
             </p>
           </div>
           <div class="item">
@@ -28,8 +30,8 @@
             Get in Touch: Reach Out to Us for Expert Financial Assistance
           </h4>
           <form @submit.prevent="onSubmit">
-            <input type="number" placeholder="Name" required v-model="number" />
-            <input type="email" placeholder="Number" required v-model="email" />
+            <input type="text" placeholder="Name" required v-model="name" />
+            <input type="number" placeholder="Number" required v-model="number" />
             <input type="text" placeholder="Message" v-model="message" />
             <div class="check">
               <input type="checkbox" id="check" required />
@@ -51,8 +53,8 @@
 
         <div class="map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24318.230715378766!2d55.18029898379754!3d25.036564084364667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6da7e9fc9149%3A0xddf5aae046fe3037!2sGAL%20Business%20Center%20-%20Serviced%20Offices%20%26%20Coworking%20Spaces%20in%20Dubai!5e0!3m2!1sen!2sae!4v1709823766538!5m2!1sen!2sae"
-            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6003.4144666137345!2d69.3183402144135!3d41.20635596266085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5ddcb1e4b3c1%3A0x67d4563d686bc430!2sFood%20city%20Tashkent!5e0!3m2!1sru!2s!4v1715794763376!5m2!1sru!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
@@ -65,40 +67,23 @@ export default {
   data() {
     return {
       number: "",
-      email: "",
+      name: "",
       message: "",
-
-      info: "",
     };
   },
 
-  // async mounted() {
-  //   const infoData = await infoApi.getInfo(this.$axios);
-
-  //   this.info = infoData.data;
-  // },
 
   methods: {
     async onSubmit() {
       const formData = {
-        email: this.email,
+        name: this.name,
         number: this.number,
         message: this.message,
       };
 
-      const res = await formApi.sendForm(formData);
 
-      if (res && res.status === 201) {
-        this.$notification["success"]({
-          message: "Succesfully sent!",
-        });
-      } else {
-        this.$notification["error"]({
-          message: "Error!",
-        });
-      }
 
-      this.email = "";
+      this.name = "";
       this.number = "";
       this.message - "";
     },

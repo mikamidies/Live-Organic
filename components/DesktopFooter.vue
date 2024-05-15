@@ -3,7 +3,7 @@
     <div class="container">
       <div class="top">
         <div class="brand">
-          <img src="@/assets/img/logo/logo.png" alt="" />
+          <img src="@/assets/img/logo/logo-2.png" alt="" />
         </div>
       </div>
       <div class="mid">
@@ -23,11 +23,13 @@
             </div>
 
             <div class="item last">
-              <p class="sup">Head office:</p>
-              <a href="#" class="txt">
-                GAL Business Center- Galadari building 16, 1st floor, Office 69,
-                IMPZ, Dubai, P.O 7992.
-              </a>
+              <p class="sup">Address:</p>
+              <p class="txt">
+                «FOOD CITY TASHKENT» M
+                100053, тошкент шахар.
+                Бектемир тумани, Нурли йул МФИ
+                Мехнатобод кучаси-82
+              </p>
             </div>
           </div>
           <div class="">
