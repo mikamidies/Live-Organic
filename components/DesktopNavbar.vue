@@ -60,12 +60,20 @@
         </ul>
 
         <div class="lang">
-          <NuxtLink to="/">Ru</NuxtLink>
+          <button @click="changeLang('ru')" :class="{ disable: $route.params.lang == 'ru' }">Ru</button>
           <div class="chopstick"></div>
-          <NuxtLink to="/">Uz</NuxtLink>
+          <button @click="changeLang('uz')" :class="{ disable: $route.params.lang == 'uz' }">Uz</button>
           <div class="chopstick"></div>
-          <NuxtLink to="/">En</NuxtLink>
+          <button @click="changeLang('en')" :class="{ disable: $route.params.lang == 'en' }">En</button>
         </div>
+
+        <!-- <div class="lang">
+          <a href="/ru" :class="{ disable: $route.params.lang == 'ru' }">Ru</a>
+          <div class="chopstick"></div>
+          <a href="/uz" :class="{ disable: $route.params.lang == 'uz' }">Uz</a>
+          <div class="chopstick"></div>
+          <a href="/en" :class="{ disable: $route.params.lang == 'en' }">En</a>
+        </div> -->
       </div>
     </div>
   </div>
@@ -79,10 +87,31 @@ export default {
     }
   },
 
+  computed: {
+    getLang() {
+      return this.$store.getters.language
+    },
+    currentLang() {
+      return this.$route.params.lang
+    },
+  },
+
   methods: {
     scrollElement(id) {
       const element = document.getElementById(id);
       element.scrollIntoView({ block: "start", behavior: "smooth" });
+    },
+
+    changeLang(code) {
+      this.$store.dispatch('actionLangRu', code)
+      this.$router.replace({
+        params: {
+          lang: code,
+        },
+        query: this.$route.query,
+      })
+
+      localStorage.setItem('Lang', code)
     },
   },
 
@@ -96,6 +125,10 @@ export default {
       }
     }
     window.addEventListener("scroll", scrollHeader);
+  },
+
+  watch: {
+    currentLang() { },
   },
 };
 </script>
@@ -196,13 +229,18 @@ export default {
   background: var(--dark);
 }
 
-.lang a {
+.lang button {
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
   cursor: pointer;
   color: var(--dark);
+}
+
+.lang button.disable {
+  color: var(--green);
+  pointer-events: none;
 }
 
 .burger {

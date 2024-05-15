@@ -101,7 +101,7 @@
         </div>
       </div>
       <div class="bottom">
-        <p class="info mamba">2024 @Live Organics Inc</p>
+        <p class="info mamba">2024 @BlissBerry Inc</p>
 
         <p class="info">All rights reserved</p>
       </div>
