@@ -7,6 +7,11 @@
             <img src="@/assets/img/logo/logo.png" alt="" />
           </NuxtLink>
         </div>
+
+        <div class="burger" @click="menuHandle = !menuHandle" :class="{ x: menuHandle }">
+          <div class="stick"></div>
+        </div>
+
         <div class="right">
           <div class="item">
             <a href="#">
@@ -34,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="bottom">
+    <div class="bottom" :class="{ active: menuHandle }">
       <div class="container">
         <ul>
           <li>
@@ -56,7 +61,7 @@
 
         <div class="lang">
           <NuxtLink to="/">Ru</NuxtLink>
-          <div class="stick"></div>
+          <div class="chopstick"></div>
           <NuxtLink to="/index-uz">Uz</NuxtLink>
         </div>
       </div>
@@ -66,6 +71,12 @@
 
 <script>
 export default {
+  data() {
+    return {
+      menuHandle: false,
+    }
+  },
+
   methods: {
     scrollElement(id) {
       const element = document.getElementById(id);
@@ -177,7 +188,7 @@ export default {
   gap: 16px;
 }
 
-.stick {
+.chopstick {
   width: 1px;
   height: 16px;
   background: var(--dark);
@@ -190,6 +201,10 @@ export default {
   line-height: 150%;
   cursor: pointer;
   color: var(--dark);
+}
+
+.burger {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -207,6 +222,14 @@ export default {
     transition: 0.4s;
   }
 
+  .scroll .top {
+    transform: translateY(0);
+  }
+
+  .scroll .bottom {
+    transform: translateY(0) translateX(-100%);
+  }
+
   .bottom ul {
     flex-direction: column;
     align-items: flex-start;
@@ -214,6 +237,71 @@ export default {
 
   .left img {
     width: 120px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .stick {
+    width: 30px;
+    height: 2px;
+    background: white;
+    position: relative;
+    transition: .3s;
+  }
+
+  .stick::after {
+    width: 30px;
+    height: 2px;
+    background: white;
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: .3s;
+  }
+
+  .stick::before {
+    width: 30px;
+    height: 2px;
+    background: white;
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    transition: .3s;
+  }
+
+  .active {
+    transform: translateX(0) !important;
+    padding: 32px 0;
+    height: 90%;
+  }
+
+  .active .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  .bottom ul {
+    gap: 24px;
+  }
+
+  .x .stick {
+    transform: rotate(45deg);
+  }
+
+  .x .stick::after {
+    transform: rotate(270deg);
+    top: 0;
+  }
+
+  .x .stick::before {
+    display: none;
   }
 }
 </style>
