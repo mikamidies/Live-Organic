@@ -1,5 +1,6 @@
 <template>
   <div class="wrap">
+    <div class="anchor" id="contacts"></div>
     <div class="container">
       <div class="top">
         <h4 class="title">Contacts</h4>
@@ -38,17 +39,10 @@
             </div>
 
             <button type="submit">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19"
-                height="18"
-                viewBox="0 0 19 18"
-                fill="none"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
                 <path
                   d="M18.5 16V14.3541C18.5 13.5363 18.0021 12.8008 17.2428 12.4971L15.2086 11.6835C14.2429 11.2971 13.1422 11.7156 12.677 12.646L12.5 13C12.5 13 10 12.5 8 10.5C6 8.5 5.5 6 5.5 6L5.85402 5.82299C6.78438 5.35781 7.20285 4.25714 6.81654 3.29136L6.00289 1.25722C5.69916 0.497903 4.96374 0 4.14593 0H2.5C1.39543 0 0.5 0.89543 0.5 2C0.5 10.8366 7.66344 18 16.5 18C17.6046 18 18.5 17.1046 18.5 16Z"
-                  fill="white"
-                />
+                  fill="white" />
               </svg>
               Send
             </button>
@@ -58,13 +52,8 @@
         <div class="map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24318.230715378766!2d55.18029898379754!3d25.036564084364667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6da7e9fc9149%3A0xddf5aae046fe3037!2sGAL%20Business%20Center%20-%20Serviced%20Offices%20%26%20Coworking%20Spaces%20in%20Dubai!5e0!3m2!1sen!2sae!4v1709823766538!5m2!1sen!2sae"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -72,65 +61,58 @@
 </template>
 
 <script>
-// export default {
-//     data() {
-//         return {
-//             modalHandle: false,
-//             number: "",
-//             email: "",
-//             message: "",
+export default {
+  data() {
+    return {
+      number: "",
+      email: "",
+      message: "",
 
-//             info: "",
-//         };
-//     },
+      info: "",
+    };
+  },
 
-//     async mounted() {
-//         const infoData = await infoApi.getInfo(this.$axios);
+  // async mounted() {
+  //   const infoData = await infoApi.getInfo(this.$axios);
 
-//         this.info = infoData.data;
-//     },
+  //   this.info = infoData.data;
+  // },
 
-//     methods: {
-//         async onSubmit() {
-//             const formData = {
-//                 email: this.email,
-//                 number: this.number,
-//                 message: this.message,
-//             };
+  methods: {
+    async onSubmit() {
+      const formData = {
+        email: this.email,
+        number: this.number,
+        message: this.message,
+      };
 
-//             const res = await formApi.sendForm(formData);
+      const res = await formApi.sendForm(formData);
 
-//             if (res && res.status === 201) {
-//                 this.$notification["success"]({
-//                     message: "Succesfully sent!",
-//                 });
-//             } else {
-//                 this.$notification["error"]({
-//                     message: "Error!",
-//                 });
-//             }
+      if (res && res.status === 201) {
+        this.$notification["success"]({
+          message: "Succesfully sent!",
+        });
+      } else {
+        this.$notification["error"]({
+          message: "Error!",
+        });
+      }
 
-//             this.email = "";
-//             this.number = "";
-//             this.message - "";
-
-//             this.closeModal();
-//         },
-
-//         openModal() {
-//             this.modalHandle = true;
-//         },
-
-//         closeModal() {
-//             this.modalHandle = false;
-//         },
-//     },
-// };
+      this.email = "";
+      this.number = "";
+      this.message - "";
+    },
+  },
+};
 </script>
 
 <style scoped>
 .wrap {
   padding-bottom: 120px;
+}
+
+.wrap {
+  position: relative;
 }
 
 .title {

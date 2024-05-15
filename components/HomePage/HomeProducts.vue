@@ -1,5 +1,6 @@
 <template>
   <div class="wrap">
+    <div class="anchor" id="products"></div>
     <div class="container">
       <h4 class="title section__title">Products</h4>
       <div class="items">
@@ -67,6 +68,10 @@ export default {};
   padding: 80px 0;
 }
 
+.wrap {
+  position: relative;
+}
+
 .items {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -111,10 +116,12 @@ export default {};
   line-height: 150%;
   color: var(--green);
 }
+
 @media screen and (max-width: 1024px) {
   .wrap {
     padding: 40px 0;
   }
+
   .title {
     margin-bottom: 24px;
   }
@@ -123,22 +130,28 @@ export default {};
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
+
   .img img {
     height: 120px;
   }
+
   .badge {
     font-size: 12px;
   }
+
   .content {
     padding: 8px;
   }
+
   .item {
     border-radius: 8px;
   }
+
   .name {
     font-size: 18px;
     margin-bottom: 4px;
   }
+
   .price {
     font-size: 14px;
   }

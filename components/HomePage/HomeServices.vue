@@ -1,5 +1,6 @@
 <template>
   <div class="wrap">
+    <div class="anchor" id="services"></div>
     <div class="container">
       <h4 class="title section__title">Services</h4>
       <div class="items">
@@ -60,6 +61,10 @@ export default {};
   padding: 80px 0;
 }
 
+.wrap {
+  position: relative;
+}
+
 .title {
   color: white;
 }
@@ -102,28 +107,36 @@ export default {};
   font-size: 16px;
   line-height: 150%;
 }
+
 @media screen and (max-width: 1024px) {
   .title {
     margin-bottom: 24px;
   }
+
   .wrap {
     padding: 40px 0;
   }
+
   .item {
     border-radius: 8px;
   }
+
   .items {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .img img {
     height: 200px;
   }
+
   .content {
     padding: 12px;
   }
+
   .name {
     font-size: 18px;
   }
+
   .sub {
     font-size: 14px;
   }

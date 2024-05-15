@@ -1,5 +1,6 @@
 <template>
   <div class="wrap">
+    <div class="anchor" id="hero"></div>
     <div class="swiper" ref="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -9,7 +10,7 @@
               Authentic Organic Fruits &amp; Vegetables<br />
               Farm to your doorstep
             </h2>
-            <button>Contact Us!</button>
+            <button @click="scrollElement('contacts')">Contact Us!</button>
           </div>
         </div>
         <div class="swiper-slide">
@@ -40,17 +41,30 @@ export default {
       // },
     });
   },
+
+  methods: {
+    scrollElement(id) {
+      const element = document.getElementById(id);
+      element.scrollIntoView({ block: "start", behavior: "smooth" });
+    },
+  },
 };
 </script>
 
 <style scoped>
+.wrap {
+  position: relative;
+}
+
 .swiper {
   height: 100vh;
 }
+
 .swiper-slide {
   position: relative;
   height: 100%;
 }
+
 .swiper-slide::after {
   content: "";
   position: absolute;
@@ -61,6 +75,7 @@ export default {
   height: 100%;
   z-index: 1;
 }
+
 .swiper-slide img {
   position: absolute;
   top: 0;
@@ -70,6 +85,7 @@ export default {
   object-fit: cover;
   z-index: 1;
 }
+
 .swiper-slide .container {
   position: relative;
   z-index: 2;
@@ -79,15 +95,18 @@ export default {
   align-items: flex-start;
   justify-content: center;
 }
+
 .title {
   color: var(--White, #fff);
   font-family: var(--decor);
   font-size: 56px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 67.2px */
+  line-height: 120%;
+  /* 67.2px */
   margin-bottom: 24px;
 }
+
 button {
   padding: 12px 48px;
   border-radius: 8px;
@@ -96,8 +115,10 @@ button {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
+  /* 24px */
 }
+
 @media screen and (max-width: 1024px) {
   .title {
     font-size: 30px;
