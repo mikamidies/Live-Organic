@@ -1,6 +1,6 @@
 export default {
   head: {
-    title: "Live-Organic",
+    title: "BlissBerry",
     htmlAttrs: {
       lang: "en",
     },

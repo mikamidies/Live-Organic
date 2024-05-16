@@ -23,6 +23,16 @@
             <button @click="scrollElement('contacts')">Contact Us!</button>
           </div>
         </div>
+        <div class="swiper-slide">
+          <img src="@/assets/img/hero-3.jpg" alt="" />
+          <div class="container">
+            <h2 class="title">
+              Organic Certified Strawberries <br />
+              From Mahabaleshwar!
+            </h2>
+            <button @click="scrollElement('contacts')">Contact Us!</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

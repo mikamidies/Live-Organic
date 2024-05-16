@@ -2,7 +2,9 @@
   <div class="wrap">
     <div class="anchor" id="about"></div>
     <div class="container">
-      <h2 class="title section__title">Welcome to Live Organic</h2>
+      <h2 class="title section__title" v-if="$route.params.lang == 'en'">Welcome to BlissBerry</h2>
+      <h2 class="title section__title" v-if="$route.params.lang == 'ru'">Добро пожаловать в BlissBerry</h2>
+      <h2 class="title section__title" v-if="$route.params.lang == 'uz'">BlissBerry'ga hush kelibsiz</h2>
       <p class="sub">
         At Live Organic, we work with local farmers and producers to bring you
         peak-quality, high-integrity organic fruits and vegetables. Same Day
