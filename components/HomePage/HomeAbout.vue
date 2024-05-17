@@ -6,20 +6,54 @@
       <h2 class="title section__title" v-if="$route.params.lang == 'ru'">Добро пожаловать в BlissBerry</h2>
       <h2 class="title section__title" v-if="$route.params.lang == 'uz'">BlissBerry'ga hush kelibsiz</h2>
       <p class="sub">
-        At Live Organic, we work with local farmers and producers to bring you
-        peak-quality, high-integrity organic fruits and vegetables. Same Day
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum at
-        accusamus cupiditate assumenda dolorem ut provident voluptatibus quos
-        quis?
+        <span v-if="$route.params.lang == 'ru'">
+          <strong>О нас</strong> - наша компания была основана в январе 2023 года и занимается экспортом и импортом
+          фруктов и овощей в
+          сотрудничестве с различными странами мира.
+          <br>
+          <strong>Наша деятельность</strong> - в сотрудничестве со многими странами мира, включая Африку, Таиланд,
+          Вьетнам, Малайзию,
+          ОАЭ, Корею, Китай,
+          Турцию, Иран и Россию, мы поставляем качественные, вкусные и полезные фрукты и овощи Barra народам нашей
+          страны и стран-партнеров в короткие сроки по доступным ценам.
+        </span>
+        <span v-if="$route.params.lang == 'uz'">
+          <strong>Biz haqimizda</strong> - bizning kompaniya 2023-yil, yanvar
+          oyida tashkil topgan boʻlib, dunyoning turli mamlakatlari bilan hamkorlikda
+          meva va sabzavotlarni eksport va import qilish bilan shugʻillanib kelmoqda.
+          <br>
+          <strong>Faoliyatlarimiz</strong> - dunyoning koʻplab mamlakatlari-jumladan Afrika, Tailand, Vietnam,
+          Malayziya, BAA, Korea, Xitoy, Turkiya, Eron
+          va Rossiya kabi mamlakatlar bilan hamkorlikda oʻz xalqimiz va hamkor mamlakatlar xalqlariga sifatli, mazali va
+          foydali, barra meva va sabzavotlarni qisqa vaqtda, qulay narxlarda yetkazib bermoqdamiz.
+        </span>
+        <span v-if="$route.params.lang == 'en'">
+          <strong>About us</strong> - our company was founded in January 2023 and is engaged in export and import
+          fruits and vegetables in
+          cooperation with various countries of the world.
+          <br>
+          <strong>Our activity</strong> is in cooperation with many countries of the world, including Africa, Thailand,
+          Vietnam, Malaysia,
+          UAE, Korea, China,
+          Turkey, Iran and Russia, we supply high-quality, delicious and healthy fruits and vegetables of Barra to the
+          peoples of our
+          countries and partner countries in a short time at affordable prices.
+        </span>
       </p>
+
+      <h2 class="par" v-if="$route.params.lang == 'en'">Our goals</h2>
+      <h2 class="par" v-if="$route.params.lang == 'ru'">Наши цели</h2>
+      <h2 class="par" v-if="$route.params.lang == 'uz'">Maqsadlarimiz</h2>
       <div class="items">
         <div class="item">
           <div>
-            <h4 class="name">Healty</h4>
             <p class="txt">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio,
-              unde! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptate, natus! Corporis eaque iusto dolores perferendis!
+              <span v-if="$route.params.lang == 'ru'">Поставка качественных и сладких фруктов, цитрусовых, тропических
+                фруктов и фруктов с экзотическим вкусом, которые являются для них новинкой</span>
+              <span v-if="$route.params.lang == 'uz'">Xalqimizga sifatli va shirin mevalar, sitrus, tropik mevalar va
+                ular uchun yangilik boʻlgan ekzotik ta’mli mevalarni yetkazib berish </span>
+              <span v-if="$route.params.lang == 'en'">Delivery to our people of quality and sweet fruits, citrus,
+                tropical fruits and exotic-flavored fruits that are new to them</span>
             </p>
           </div>
           <div class="icon">
@@ -35,11 +69,13 @@
         </div>
         <div class="item">
           <div>
-            <h4 class="name">Natural</h4>
             <p class="txt">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio,
-              unde! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dolores, accusantium?
+              <span v-if="$route.params.lang == 'ru'">Вывод на мировой рынок сезонные фрукты и арбузы - дыни из нашего
+                солнечного края</span>
+              <span v-if="$route.params.lang == 'uz'">Serquyosh Oʻzbekistonimizning mavsumiy mevalari va poliz
+                ekinlarini jahon bozoriga olib chiqish</span>
+              <span v-if="$route.params.lang == 'en'">Bringing seasonal fruits and melons of our sunny Uzbekistan to
+                the world market</span>
             </p>
           </div>
           <div class="icon">
@@ -74,10 +110,13 @@
         </div>
         <div class="item">
           <div>
-            <h4 class="name">Cheap</h4>
             <p class="txt">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio,
-              unde! Lorem ipsum dolor sit amet.
+              <span v-if="$route.params.lang == 'ru'">Приносить пользу экономике страны, создавать новые рабочие места,
+                увеличивая объемы экспорта и импорта</span>
+              <span v-if="$route.params.lang == 'uz'">Eksport va import koʻlamini oshirish bilan yurtimiz iqtisodiyotiga
+                foyda keltirish. Yangi ish oʻrinlarini joriiy qilish</span>
+              <span v-if="$route.params.lang == 'en'">To benefit the economy of our country by increasing the scale of
+                exports and imports, to bring new jobs</span>
             </p>
           </div>
           <div class="icon">
@@ -162,12 +201,13 @@ export default {};
   line-height: 140%;
   /* 33.6px */
   margin-bottom: 12px;
+  display: none;
 }
 
 .txt {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 150%;
-  max-width: 80%;
+  max-width: 90%;
   margin-bottom: 24px;
 }
 
@@ -178,6 +218,13 @@ export default {};
 
 .icon svg path {
   fill: var(--dark);
+}
+
+.par {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-family: var(--decor-sm);
 }
 
 @media screen and (max-width: 1024px) {

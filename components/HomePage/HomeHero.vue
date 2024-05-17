@@ -7,30 +7,48 @@
           <img src="@/assets/img/hero-1.jpg" alt="" />
           <div class="container">
             <h2 class="title">
-              Authentic Organic Fruits &amp; Vegetables<br />
-              Farm to your doorstep
+              <span v-if="$route.params.lang == 'ru'">Свежие экзотические фрукты и овощи со всего мира!</span>
+              <span v-if="$route.params.lang == 'uz'">Butun dunyodan barra ekzotik meva va sabzavotlar!</span>
+              <span v-if="$route.params.lang == 'en'">Fresh exotic fruits and vegetables from all over the world!</span>
             </h2>
-            <button @click="scrollElement('contacts')">Contact Us!</button>
+            <button @click="scrollElement('contacts')">
+              <span v-if="$route.params.lang == 'ru'">Контакты</span>
+              <span v-if="$route.params.lang == 'uz'">Bog'lanish</span>
+              <span v-if="$route.params.lang == 'en'">Contacts</span>
+            </button>
           </div>
         </div>
         <div class="swiper-slide">
           <img src="@/assets/img/hero-2.jpg" alt="" />
           <div class="container">
             <h2 class="title">
-              Organic Certified Strawberries <br />
-              From Mahabaleshwar!
+              <span v-if="$route.params.lang == 'ru'">Лучшие фрукты и овощи из Узбекистана к вашему столу</span>
+              <span v-if="$route.params.lang == 'uz'">O'zbekistondan dasturxoningizga eng yaxshi meva va
+                sabzavotlar</span>
+              <span v-if="$route.params.lang == 'en'">The best fruits and vegetables from Uzbekistan for your
+                table</span>
             </h2>
-            <button @click="scrollElement('contacts')">Contact Us!</button>
+            <button @click="scrollElement('contacts')">
+              <span v-if="$route.params.lang == 'ru'">Контакты</span>
+              <span v-if="$route.params.lang == 'uz'">Bog'lanish</span>
+              <span v-if="$route.params.lang == 'en'">Contacts</span>
+            </button>
           </div>
         </div>
         <div class="swiper-slide">
           <img src="@/assets/img/hero-3.jpg" alt="" />
           <div class="container">
             <h2 class="title">
-              Organic Certified Strawberries <br />
-              From Mahabaleshwar!
+              <span v-if="$route.params.lang == 'ru'">Свежие фрукты и овощи прямо к вашему порогу</span>
+              <span v-if="$route.params.lang == 'uz'">Barra meva va sabzavotlar sizning ostonangizga to'g'ri
+                keladi</span>
+              <span v-if="$route.params.lang == 'en'">Fresh fruits and vegetables right at your doorstep</span>
             </h2>
-            <button @click="scrollElement('contacts')">Contact Us!</button>
+            <button @click="scrollElement('contacts')">
+              <span v-if="$route.params.lang == 'ru'">Контакты</span>
+              <span v-if="$route.params.lang == 'uz'">Bog'lanish</span>
+              <span v-if="$route.params.lang == 'en'">Contacts</span>
+            </button>
           </div>
         </div>
       </div>
@@ -46,9 +64,9 @@ export default {
   mounted() {
     new Swiper(this.$refs.swiper, {
       slidesPerView: 1,
-      speed: 1000,
+      speed: 1500,
       autoplay: {
-        delay: 3000,
+        delay: 4000,
         disableOnInteraction: false,
       },
     });
@@ -117,6 +135,7 @@ export default {
   line-height: 120%;
   /* 67.2px */
   margin-bottom: 24px;
+  max-width: 70%;
 }
 
 button {
