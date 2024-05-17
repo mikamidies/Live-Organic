@@ -2,7 +2,9 @@
   <div class="wrap">
     <div class="anchor" id="products"></div>
     <div class="container">
-      <h4 class="title section__title">Products</h4>
+      <h2 class="title section__title" v-if="$route.params.lang == 'en'">Products</h2>
+      <h2 class="title section__title" v-if="$route.params.lang == 'ru'">Продукция</h2>
+      <h2 class="title section__title" v-if="$route.params.lang == 'uz'">Mahsulotlarimiz</h2>
       <div class="items">
         <div class="item">
           <div class="badge">Save 11%</div>
@@ -91,6 +93,7 @@ export default {};
   background: red;
   color: white;
   padding: 4px 8px;
+  display: none;
 }
 
 .img img {
@@ -108,13 +111,13 @@ export default {};
   font-size: 24px;
   color: var(--dark);
   font-family: var(--decor-sm);
-  margin-bottom: 12px;
 }
 
 .price {
   font-size: 16px;
   line-height: 150%;
   color: var(--green);
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {

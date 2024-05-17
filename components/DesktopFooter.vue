@@ -9,11 +9,19 @@
       <div class="mid">
         <div class="row">
           <div class="">
-            <h4 class="tite" style="margin-bottom: 16px">Contacts</h4>
+            <h4 class="tite" style="margin-bottom: 16px">
+              <span v-if="$route.params.lang == 'ru'">Контакты</span>
+              <span v-if="$route.params.lang == 'uz'">Bog'lanish</span>
+              <span v-if="$route.params.lang == 'en'">Contacts</span>
+            </h4>
             <div class="items">
               <div class="item">
-                <p class="sup">Phone number</p>
-                <a href="#" class="txt nelly"> +90 (800) 000-0000 </a>
+                <p class="sup">
+                  <span v-if="$route.params.lang == 'ru'">Номер телефона:</span>
+                  <span v-if="$route.params.lang == 'uz'">Telefon raqami:</span>
+                  <span v-if="$route.params.lang == 'en'">Phone number:</span>
+                </p>
+                <a href="#" class="txt nelly"> +998 90 016 0606 </a>
               </div>
 
               <div class="item">
@@ -23,46 +31,97 @@
             </div>
 
             <div class="item last">
-              <p class="sup">Address:</p>
+              <p class="sup">
+                <span v-if="$route.params.lang == 'ru'">Адрес:</span>
+                <span v-if="$route.params.lang == 'uz'">Manzil:</span>
+                <span v-if="$route.params.lang == 'en'">Address:</span>
+              </p>
               <p class="txt">
-                «FOOD CITY TASHKENT» M
-                100053, тошкент шахар.
-                Бектемир тумани, Нурли йул МФИ
-                Мехнатобод кучаси-82
+                <span v-if="$route.params.lang == 'ru'">
+                  Город Ташкент, Бектемирский район, ул. Мехтабад 82. Комплекс" FOOD CITY TASHKENT"
+                </span>
+                <span v-if="$route.params.lang == 'uz'">
+                  Tashkent City, Bektemir district, Mehnatabad Street 82. "FOOD CITY TASHKENT" complex
+                </span>
+                <span v-if="$route.params.lang == 'en'">
+                  Toshkent shahar, Bektemir tumani, Mehnatobod ko'chasi 82. "FOOD
+                  CITY TASHKENT" majmuasi
+                </span>
               </p>
             </div>
           </div>
           <div class="">
             <div class="links">
               <ul>
-                <h4 class="tite">Menu</h4>
+                <h4 class="tite">
+                  <span v-if="$route.params.lang == 'ru'">Меню:</span>
+                  <span v-if="$route.params.lang == 'uz'">Menyu:</span>
+                  <span v-if="$route.params.lang == 'en'">Menu:</span>
+                </h4>
                 <li>
-                  <button @click="scrollElement('hero')"> Main </button>
+                  <button @click="scrollElement('hero')">
+                    <span v-if="$route.params.lang == 'ru'">Главная</span>
+                    <span v-if="$route.params.lang == 'uz'">Bosh sahifa</span>
+                    <span v-if="$route.params.lang == 'en'">Main</span>
+                  </button>
                 </li>
                 <li>
-                  <button @click="scrollElement('about')"> About </button>
+                  <button @click="scrollElement('about')">
+                    <span v-if="$route.params.lang == 'ru'">О нас</span>
+                    <span v-if="$route.params.lang == 'uz'">Biz haqimizda</span>
+                    <span v-if="$route.params.lang == 'en'">About</span>
+                  </button>
                 </li>
                 <li>
-                  <button @click="scrollElement('products')"> Products </button>
+                  <button @click="scrollElement('products')">
+                    <span v-if="$route.params.lang == 'ru'">Продукция</span>
+                    <span v-if="$route.params.lang == 'uz'">Mahsulotlarimiz</span>
+                    <span v-if="$route.params.lang == 'en'">Products</span>
+                  </button>
                 </li>
                 <li>
-                  <button @click="scrollElement('services')"> Services </button>
+                  <button @click="scrollElement('services')">
+                    <span v-if="$route.params.lang == 'ru'">Сервисы</span>
+                    <span v-if="$route.params.lang == 'uz'">Xizmatlarimiz</span>
+                    <span v-if="$route.params.lang == 'en'">Services</span>
+                  </button>
                 </li>
                 <li>
-                  <button @click="scrollElement('contacts')"> Contacts </button>
+                  <button @click="scrollElement('contacts')">
+                    <span v-if="$route.params.lang == 'ru'">Контакты</span>
+                    <span v-if="$route.params.lang == 'uz'">Bog'lanish</span>
+                    <span v-if="$route.params.lang == 'en'">Contacts</span>
+                  </button>
                 </li>
               </ul>
             </div>
           </div>
           <div class="right">
             <p class="info">
-              Wild Blueberries also known as Lowbush Blueberries are sweet,
-              tangy, amazingly popular and extremely nutritious. Labeled as a
-              super-food they are low in calories and high in fiber, vitamins
-              and minerals.
+              <span v-if="$route.params.lang == 'ru'">
+                Наша компания была основана в январе 2023 года и занимается экспортом и
+                импортом
+                фруктов и овощей в
+                сотрудничестве с различными странами мира.
+              </span>
+              <span v-if="$route.params.lang == 'uz'">
+                Bizning kompaniya 2023-yil, yanvar
+                oyida tashkil topgan boʻlib, dunyoning turli mamlakatlari bilan hamkorlikda
+                meva va sabzavotlarni eksport va import qilish bilan shugʻillanib kelmoqda.
+              </span>
+              <span v-if="$route.params.lang == 'en'">
+                Our company was founded in January 2023 and is engaged in export and import
+                fruits and vegetables in
+                cooperation with various countries of the world.
+              </span>
+
             </p>
             <div class="items socials">
-              <p class="tite">Social media</p>
+              <p class="tite">
+                <span v-if="$route.params.lang == 'ru'">Социальные сети:</span>
+                <span v-if="$route.params.lang == 'uz'">Ijtimoiy tarmoqlar:</span>
+                <span v-if="$route.params.lang == 'en'">Socials:</span>
+              </p>
               <div class="socs">
                 <a href="https://t.me/Blissberryuz" target="_blank" class="soc">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -95,64 +154,17 @@
       <div class="bottom">
         <p class="info mamba">2024 @BlissBerry Inc</p>
 
-        <p class="info">All rights reserved</p>
+        <p class="info">
+          <span v-if="$route.params.lang == 'ru'">Все права защищены</span>
+          <span v-if="$route.params.lang == 'uz'">Barcha huquqlar himoyalangan</span>
+          <span v-if="$route.params.lang == 'en'">All rights reserved</span>
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import mediaApi from '@/api/media'
-// import servicesApi from '@/api/services'
-
-// export default {
-//     name: 'HajtexDeskropFooter',
-
-//     data() {
-//         return {
-//             info: {},
-//             services: {},
-//         }
-//     },
-
-//     async fetch() {
-//         const info = await mediaApi.getInfo(this.$axios, this.$route.params.lang)
-//         const services = await servicesApi.getServices(
-//             this.$axios,
-//             this.$route.params.lang
-//         )
-
-//         this.info = info
-//         this.services = services
-//     },
-
-//     mounted() { },
-
-//     methods: {
-//         async fetchAll() {
-//             const info = await mediaApi.getInfo(this.$axios, this.$route.params.lang)
-//             const services = await servicesApi.getServices(
-//                 this.$axios,
-//                 this.$route.params.lang
-//             )
-//             this.info = info
-//             this.services = services
-//         },
-//     },
-
-//     computed: {
-//         currentLang() {
-//             return this.$route.params.lang
-//         },
-//     },
-
-//     watch: {
-//         currentLang() {
-//             this.fetchAll()
-//         },
-//     },
-// }
-
 export default {
   methods: {
     scrollElement(id) {
@@ -264,6 +276,8 @@ export default {
 
 .socs {
   display: flex;
+  justify-content: flex-end;
+  width: 100%;
   gap: 40px;
 }
 

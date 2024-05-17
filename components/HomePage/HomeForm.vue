@@ -3,15 +3,29 @@
     <div class="anchor" id="contacts"></div>
     <div class="container">
       <div class="top">
-        <h4 class="title">Contacts</h4>
+        <h4 class="title">
+          <span v-if="$route.params.lang == 'ru'">Контакты</span>
+          <span v-if="$route.params.lang == 'uz'">Bog'lanish</span>
+          <span v-if="$route.params.lang == 'en'">Contacts</span>
+        </h4>
         <div class="right">
           <div class="item">
-            <p class="sup">Address:</p>
+            <p class="sup">
+              <span v-if="$route.params.lang == 'ru'">Адрес:</span>
+              <span v-if="$route.params.lang == 'uz'">Manzil:</span>
+              <span v-if="$route.params.lang == 'en'">Address:</span>
+            </p>
             <p class="value">
-              «FOOD CITY TASHKENT» M
-              100053, тошкент шахар.
-              Бектемир тумани, Нурли йул МФИ
-              Мехнатобод кучаси-82
+              <span v-if="$route.params.lang == 'ru'">
+                Город Ташкент, Бектемирский район, ул. Мехтабад 82. Комплекс" FOOD CITY TASHKENT"
+              </span>
+              <span v-if="$route.params.lang == 'uz'">
+                Tashkent City, Bektemir district, Mehnatabad Street 82. "FOOD CITY TASHKENT" complex
+              </span>
+              <span v-if="$route.params.lang == 'en'">
+                Toshkent shahar, Bektemir tumani, Mehnatobod ko'chasi 82. "FOOD
+                CITY TASHKENT" majmuasi
+              </span>
             </p>
           </div>
           <div class="item">
@@ -19,24 +33,59 @@
             <a :href="`mailto:`" class="value">info@dunyo.ae</a>
           </div>
           <div class="item">
-            <p class="sup">Phone number</p>
-            <a :href="`tel:`" class="value">+971 52 2464048</a>
+            <p class="sup">
+              <span v-if="$route.params.lang == 'ru'">Номер телефона:</span>
+              <span v-if="$route.params.lang == 'uz'">Telefon raqami:</span>
+              <span v-if="$route.params.lang == 'en'">Phone number:</span>
+            </p>
+            <a :href="`tel:`" class="value">+998 90 016 0606</a>
+            <a :href="`tel:`" class="value">+998 93 006 7070</a>
           </div>
         </div>
       </div>
       <div class="bottom">
         <div class="form">
           <h4 class="par">
-            Get in Touch: Reach Out to Us for Expert Financial Assistance
+            <span v-if="$route.params.lang == 'ru'">Свяжитесь с нами</span>
+            <span v-if="$route.params.lang == 'uz'">Biz bilan bog'laning</span>
+            <span v-if="$route.params.lang == 'en'">Get in touch</span>
           </h4>
           <form @submit.prevent="onSubmit">
-            <input type="text" placeholder="Name" required v-model="name" />
-            <input type="number" placeholder="Number" required v-model="number" />
-            <input type="text" placeholder="Message" v-model="message" />
+
+
+            <div class="inputter">
+              <label v-if="labelHandle" for="name">
+                <span v-if="$route.params.lang == 'ru'">Ваше имя</span>
+                <span v-if="$route.params.lang == 'uz'">Ismingiz</span>
+                <span v-if="$route.params.lang == 'en'">Your name</span>
+              </label>
+              <input id="name" @click="labelHandle = false" type="text" required v-model="name" />
+            </div>
+
+            <div class="inputter">
+              <label v-if="labelHandle2" for="number">
+                <span v-if="$route.params.lang == 'ru'">Номер телефона</span>
+                <span v-if="$route.params.lang == 'uz'">Telefon raqamingiz</span>
+                <span v-if="$route.params.lang == 'en'">Phone number</span>
+              </label>
+              <input id="number" @click="labelHandle2 = false" type="number" required v-model="number" />
+            </div>
+
+            <div class="inputter">
+              <label v-if="labelHandle3" for="message">
+                <span v-if="$route.params.lang == 'ru'">Комментарий</span>
+                <span v-if="$route.params.lang == 'uz'">Izohingiz</span>
+                <span v-if="$route.params.lang == 'en'">Comments</span>
+              </label>
+              <input id="message" @click="labelHandle3 = false" type="text" v-model="message" />
+            </div>
+
             <div class="check">
               <input type="checkbox" id="check" required />
               <label for="check">
-                I agree to the terms of the Privacy Policy
+                <span v-if="$route.params.lang == 'ru'">Я согласен с условиями Политики конфиденциальности</span>
+                <span v-if="$route.params.lang == 'uz'">Men Maxfiylik siyosati shartlariga rozilik bildiraman</span>
+                <span v-if="$route.params.lang == 'en'">I agree to the terms of the Privacy Policy</span>
               </label>
             </div>
 
@@ -46,7 +95,9 @@
                   d="M18.5 16V14.3541C18.5 13.5363 18.0021 12.8008 17.2428 12.4971L15.2086 11.6835C14.2429 11.2971 13.1422 11.7156 12.677 12.646L12.5 13C12.5 13 10 12.5 8 10.5C6 8.5 5.5 6 5.5 6L5.85402 5.82299C6.78438 5.35781 7.20285 4.25714 6.81654 3.29136L6.00289 1.25722C5.69916 0.497903 4.96374 0 4.14593 0H2.5C1.39543 0 0.5 0.89543 0.5 2C0.5 10.8366 7.66344 18 16.5 18C17.6046 18 18.5 17.1046 18.5 16Z"
                   fill="white" />
               </svg>
-              Send
+              <span v-if="$route.params.lang == 'ru'">Отправить</span>
+              <span v-if="$route.params.lang == 'uz'">Yuborish</span>
+              <span v-if="$route.params.lang == 'en'">Submit</span>
             </button>
           </form>
         </div>
@@ -69,9 +120,15 @@ export default {
       number: "",
       name: "",
       message: "",
+
+      labelHandle: true,
+      labelHandle2: true,
+      labelHandle3: true,
     };
   },
 
+  mounted() {
+  },
 
   methods: {
     async onSubmit() {
@@ -80,8 +137,6 @@ export default {
         number: this.number,
         message: this.message,
       };
-
-
 
       this.name = "";
       this.number = "";
@@ -142,13 +197,15 @@ export default {
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+  display: flex;
+  max-width: 90%;
   /* 33.6px */
 }
 
 .form {
   background: var(--Apple-Grey, #f5f5f7);
   padding: 24px;
-  min-height: 600px;
+  min-height: 532px;
   border-radius: 12px;
 }
 
@@ -164,8 +221,7 @@ export default {
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
-  /* 33.6px */
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 form {
@@ -174,16 +230,36 @@ form {
   justify-content: space-between;
 }
 
+.inputter {
+  position: relative;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #dddfe2;
+  height: 40px;
+}
+
 input {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.inputter label {
   color: var(--grey-64, #5d5d5f);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  /* 27px */
-  padding-bottom: 16px;
-  border-bottom: 1px solid #dddfe2;
-  margin-bottom: 40px;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+input:focus,
+input:target {
+  background: #f5f5f7;
 }
 
 .check {
