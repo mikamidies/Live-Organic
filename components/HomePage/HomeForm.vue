@@ -30,7 +30,7 @@
           </div>
           <div class="item">
             <p class="sup">Email:</p>
-            <a :href="`mailto:`" class="value">info@dunyo.ae</a>
+            <a :href="`mailto:M.abdullaev@blissberry.uz`" class="value">M.abdullaev@blissberry.uz</a>
           </div>
           <div class="item">
             <p class="sup">
@@ -38,8 +38,8 @@
               <span v-if="$route.params.lang == 'uz'">Telefon raqami:</span>
               <span v-if="$route.params.lang == 'en'">Phone number:</span>
             </p>
-            <a :href="`tel:`" class="value">+998 90 016 0606</a>
-            <a :href="`tel:`" class="value">+998 93 006 7070</a>
+            <a :href="`tel:+998900160606`" class="value">+998 90 016 0606</a>
+            <a :href="`tel:+998930067070`" class="value">+998 93 006 7070</a>
           </div>
         </div>
       </div>

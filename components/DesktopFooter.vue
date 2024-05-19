@@ -21,12 +21,12 @@
                   <span v-if="$route.params.lang == 'uz'">Telefon raqami:</span>
                   <span v-if="$route.params.lang == 'en'">Phone number:</span>
                 </p>
-                <a href="#" class="txt nelly"> +998 90 016 0606 </a>
+                <a href="tel:+998900160606" class="txt nelly"> +998 90 016 0606 </a>
               </div>
 
               <div class="item">
                 <p class="sup">Email</p>
-                <a href="#" class="txt nelly"> organiclive@gmail.com </a>
+                <a href="mailto:M.abdullaev@blissberry.uz" class="txt nelly"> M.abdullaev@blissberry.uz </a>
               </div>
             </div>
 
