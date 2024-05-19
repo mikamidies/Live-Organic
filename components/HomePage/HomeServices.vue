@@ -10,7 +10,19 @@
       <div class="items">
         <div class="item">
           <div class="img">
-            <img src="@/assets/img/service-1.jpg" alt="" />
+            <div class="swiper" ref="swiperOne">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="@/assets/img/service/export-3.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="@/assets/img/service/export-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="@/assets/img/service/export-1.jpg" alt="" />
+                </div>
+              </div>
+            </div>
           </div>
           <div class="content">
             <p class="name">
@@ -47,7 +59,19 @@
         </div>
         <div class="item">
           <div class="img">
-            <img src="@/assets/img/service-2.jpg" alt="" />
+            <div class="swiper" ref="swiperTwo">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="@/assets/img/service/import-1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="@/assets/img/service/import-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="@/assets/img/service/import-3.jpg" alt="" />
+                </div>
+              </div>
+            </div>
           </div>
           <div class="content">
             <p class="name">
@@ -85,7 +109,19 @@
         </div>
         <div class="item">
           <div class="img">
-            <img src="@/assets/img/service-3.jpg" alt="" />
+            <div class="swiper" ref="swiperThree">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="@/assets/img/service/delivery-1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="@/assets/img/service/delivery-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="@/assets/img/service/delivery-3.jpg" alt="" />
+                </div>
+              </div>
+            </div>
           </div>
           <div class="content">
             <p class="name">
@@ -126,7 +162,39 @@
 </template>
 
 <script>
-export default {};
+import Swiper from "swiper/swiper-bundle.js";
+import "swiper/swiper-bundle.min.css";
+
+export default {
+  mounted() {
+    new Swiper(this.$refs.swiperOne, {
+      slidesPerView: 1,
+      speed: 1500,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+    });
+
+    new Swiper(this.$refs.swiperTwo, {
+      slidesPerView: 1,
+      speed: 1500,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+
+    new Swiper(this.$refs.swiperThree, {
+      slidesPerView: 1,
+      speed: 1500,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  },
+};
 </script>
 
 <style scoped>

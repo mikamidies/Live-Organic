@@ -40,10 +40,10 @@
                 <span v-if="$route.params.lang == 'ru'">
                   Город Ташкент, Бектемирский район, ул. Мехтабад 82. Комплекс" FOOD CITY TASHKENT"
                 </span>
-                <span v-if="$route.params.lang == 'uz'">
+                <span v-if="$route.params.lang == 'en'">
                   Tashkent City, Bektemir district, Mehnatabad Street 82. "FOOD CITY TASHKENT" complex
                 </span>
-                <span v-if="$route.params.lang == 'en'">
+                <span v-if="$route.params.lang == 'uz'">
                   Toshkent shahar, Bektemir tumani, Mehnatobod ko'chasi 82. "FOOD
                   CITY TASHKENT" majmuasi
                 </span>
