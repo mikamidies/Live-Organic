@@ -7,7 +7,7 @@
       <h2 class="title section__title" v-if="$route.params.lang == 'uz'">Mahsulotlarimiz</h2>
 
 
-      <div class="section">
+      <div class="section" data-aos="fade-up" data-aos-duration="500">
         <h4 class="par">
           <span v-if="$route.params.lang == 'ru'">Фрукты</span>
           <span v-if="$route.params.lang == 'uz'">Mevalar</span>
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div class="section">
+      <div class="section" data-aos="fade-up" data-aos-duration="1000">
         <h4 class="par">
           <span v-if="$route.params.lang == 'ru'">Ягоды</span>
           <span v-if="$route.params.lang == 'uz'">Rezavorlar</span>
@@ -55,7 +55,7 @@
         </div>
       </div>
 
-      <div class="section">
+      <div class="section" data-aos="fade-up" data-aos-duration="1500">
         <h4 class="par">
           <span v-if="$route.params.lang == 'ru'">Овощи</span>
           <span v-if="$route.params.lang == 'uz'">Sabzavotlar</span>

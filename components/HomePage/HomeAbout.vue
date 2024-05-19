@@ -45,7 +45,7 @@
       <h2 class="par" v-if="$route.params.lang == 'ru'">Наши цели</h2>
       <h2 class="par" v-if="$route.params.lang == 'uz'">Maqsadlarimiz</h2>
       <div class="items">
-        <div class="item">
+        <div class="item" data-aos="fade-left" data-aos-duration="500">
           <div>
             <p class="txt">
               <span v-if="$route.params.lang == 'ru'">Поставка качественных и сладких фруктов, цитрусовых, тропических
@@ -67,7 +67,7 @@
             </svg>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-left" data-aos-duration="1000">
           <div>
             <p class="txt">
               <span v-if="$route.params.lang == 'ru'">Вывод на мировой рынок сезонные фрукты и арбузы - дыни из нашего
@@ -108,7 +108,7 @@
             </svg>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-left" data-aos-duration="1500">
           <div>
             <p class="txt">
               <span v-if="$route.params.lang == 'ru'">Приносить пользу экономике страны, создавать новые рабочие места,
@@ -147,6 +147,7 @@ export default {};
 <style scoped>
 .wrap {
   padding: 120px 0;
+  overflow: hidden;
 }
 
 .wrap {

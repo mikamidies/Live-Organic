@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="bottom">
-        <div class="form">
+        <div class="form" data-aos="fade-right" data-aos-duration="500">
           <h4 class="par">
             <span v-if="$route.params.lang == 'ru'">Свяжитесь с нами</span>
             <span v-if="$route.params.lang == 'uz'">Biz bilan bog'laning</span>
@@ -102,7 +102,7 @@
           </form>
         </div>
 
-        <div class="map">
+        <div class="map" data-aos="fade-up" data-aos-duration="1000">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6003.4144666137345!2d69.3183402144135!3d41.20635596266085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5ddcb1e4b3c1%3A0x67d4563d686bc430!2sFood%20city%20Tashkent!5e0!3m2!1sru!2s!4v1715794763376!5m2!1sru!2s"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -159,6 +159,7 @@ export default {
 <style scoped>
 .wrap {
   padding-bottom: 120px;
+  overflow: hidden;
 }
 
 .wrap {

@@ -8,7 +8,7 @@
         <h2 class="title section__title" v-if="$route.params.lang == 'uz'">Xizmatlarimiz</h2>
       </h4>
       <div class="items">
-        <div class="item">
+        <div class="item" data-aos="fade-up" data-aos-duration="500">
           <div class="img">
             <div class="swiper" ref="swiperOne">
               <div class="swiper-wrapper">
@@ -57,7 +57,7 @@
             </p>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up" data-aos-duration="1000">
           <div class="img">
             <div class="swiper" ref="swiperTwo">
               <div class="swiper-wrapper">
@@ -107,7 +107,7 @@
             </p>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up" data-aos-duration="1500">
           <div class="img">
             <div class="swiper" ref="swiperThree">
               <div class="swiper-wrapper">
