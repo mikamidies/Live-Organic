@@ -366,11 +366,12 @@ input:target {
   }
 
   .par {
-    font-size: 16px;
+    font-size: 18px;
+    font-family: var(--decor-sm);
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
 
   input {
@@ -419,6 +420,10 @@ input:target {
 
   .bottom iframe {
     height: 320px;
+  }
+
+  .inputter {
+    margin-bottom: 24px;
   }
 }
 </style>

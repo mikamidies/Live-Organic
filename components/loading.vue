@@ -141,4 +141,10 @@ svg path.red {
         stroke: transparent;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .pic {
+        width: 140px;
+    }
+}
 </style>

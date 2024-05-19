@@ -43,35 +43,35 @@
       <div class="container">
         <ul>
           <li>
-            <div @click="scrollElement('hero')">
+            <div @click="scrollElement('hero'), menuHandle = false">
               <span v-if="$route.params.lang == 'ru'">Главная</span>
               <span v-if="$route.params.lang == 'uz'">Bosh sahifa</span>
               <span v-if="$route.params.lang == 'en'">Main</span>
             </div>
           </li>
           <li>
-            <div @click="scrollElement('about')">
+            <div @click="scrollElement('about'), menuHandle = false">
               <span v-if="$route.params.lang == 'ru'">О нас</span>
               <span v-if="$route.params.lang == 'uz'">Biz haqimizda</span>
               <span v-if="$route.params.lang == 'en'">About</span>
             </div>
           </li>
           <li>
-            <div @click="scrollElement('products')">
+            <div @click="scrollElement('products'), menuHandle = false">
               <span v-if="$route.params.lang == 'ru'">Продукция</span>
               <span v-if="$route.params.lang == 'uz'">Mahsulotlarimiz</span>
               <span v-if="$route.params.lang == 'en'">Products</span>
             </div>
           </li>
           <li>
-            <div @click="scrollElement('services')">
+            <div @click="scrollElement('services'), menuHandle = false">
               <span v-if="$route.params.lang == 'ru'">Сервисы</span>
               <span v-if="$route.params.lang == 'uz'">Xizmatlarimiz</span>
               <span v-if="$route.params.lang == 'en'">Services</span>
             </div>
           </li>
           <li>
-            <div @click="scrollElement('contacts')">
+            <div @click="scrollElement('contacts'), menuHandle = false">
               <span v-if="$route.params.lang == 'ru'">Контакты</span>
               <span v-if="$route.params.lang == 'uz'">Bog'lanish</span>
               <span v-if="$route.params.lang == 'en'">Contacts</span>
@@ -293,6 +293,7 @@ export default {
   .bottom ul {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 
   .left img {
@@ -349,6 +350,15 @@ export default {
 
   .bottom ul {
     gap: 24px;
+  }
+
+  .bottom li {
+    width: 100%;
+  }
+
+  .bottom div {
+    font-family: var(--decor);
+    font-size: 20px;
   }
 
   .x .stick {

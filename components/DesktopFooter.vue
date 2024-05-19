@@ -363,6 +363,10 @@ export default {
     margin-bottom: 0;
   }
 
+  .socs {
+    justify-content: flex-start;
+  }
+
   .item .sup,
   .socials .sup {
     font-weight: 400;

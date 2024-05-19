@@ -153,6 +153,7 @@ button {
 @media screen and (max-width: 1024px) {
   .title {
     font-size: 30px;
+    max-width: 90%;
   }
 }
 </style>
