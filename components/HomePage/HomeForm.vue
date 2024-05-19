@@ -50,7 +50,7 @@
             <span v-if="$route.params.lang == 'uz'">Biz bilan bog'laning</span>
             <span v-if="$route.params.lang == 'en'">Get in touch</span>
           </h4>
-          <form @submit.prevent="onSubmit">
+          <form @submit.prevent="sendTelegram">
 
 
             <div class="inputter">
@@ -121,6 +121,9 @@ export default {
       name: "",
       message: "",
 
+      token: "7184404488:AAG0SukaYR3PxzT-REfMC8xJE8OLLGdxIA8",
+      chatId: "-1002037246623",
+
       labelHandle: true,
       labelHandle2: true,
       labelHandle3: true,
@@ -131,16 +134,23 @@ export default {
   },
 
   methods: {
-    async onSubmit() {
-      const formData = {
-        name: this.name,
-        number: this.number,
-        message: this.message,
-      };
+    sendTelegram() {
+      const message = `Name: ${this.name}%0APhone number: ${this.number}%0AMessage: ${this.message}`;
 
-      this.name = "";
-      this.number = "";
-      this.message - "";
+      this.$axios
+        .post(
+          `https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chatId}&text=${message}`
+        )
+        .then((response) => {
+          console.log("Successfully", response);
+          this.number = "";
+          this.name = "";
+          this.message = "";
+          alert("Muvofaqqiyatli jo'natildi");
+        }),
+        (error) => {
+          console.log(error);
+        };
     },
   },
 };
@@ -242,6 +252,22 @@ input {
   height: 100%;
   z-index: 2;
   position: relative;
+  color: black;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding-left: 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .inputter label {
@@ -251,7 +277,7 @@ input {
   font-weight: 400;
   line-height: 150%;
   position: absolute;
-  left: 16px;
+  left: 8px;
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
