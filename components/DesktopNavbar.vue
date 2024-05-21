@@ -179,7 +179,7 @@ export default {
 }
 
 .left img {
-  width: 180px;
+  width: 240px;
   object-fit: contain;
 }
 
@@ -219,7 +219,7 @@ export default {
 }
 
 .scroll .bottom {
-  transform: translateY(-100px);
+  transform: translateY(-126px);
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 

@@ -110,7 +110,7 @@ export default {
           img: "/products/fruits/3.png",
         },
         {
-          name_en: "Tangerine",
+          name_en: "Mandarin",
           name_ru: "Мандарин",
           name_uz: "Mandarin",
           img: "/products/fruits/4.png",
@@ -118,7 +118,7 @@ export default {
         {
           name_en: "Grapefruit",
           name_ru: "Грейпфрут",
-          name_uz: "Greypfrut",
+          name_uz: "Greypfruit",
           img: "/products/fruits/5.png",
         },
         {
@@ -134,9 +134,9 @@ export default {
           img: "/products/fruits/7.png",
         },
         {
-          name_en: "Dragonfruit",
+          name_en: "Dragon fruit",
           name_ru: "Драгонфрут",
-          name_uz: "Dragonfrut",
+          name_uz: "Ajdar mevasi",
           img: "/products/fruits/8.png",
         },
         {
@@ -152,13 +152,13 @@ export default {
           img: "/products/fruits/10.png",
         },
         {
-          name_en: "Mangosten",
+          name_en: "Mangoosten",
           name_ru: "Мангостен",
           name_uz: "Mangosten",
           img: "/products/fruits/11.png",
         },
         {
-          name_en: "Marakuya",
+          name_en: "Maracuya",
           name_ru: "Маракуя",
           name_uz: "Marakuya",
           img: "/products/fruits/12.png",
@@ -190,11 +190,11 @@ export default {
         {
           name_en: "Starfruit",
           name_ru: "Карамбола",
-          name_uz: "Karambola",
+          name_uz: "Yulduz meva",
           img: "/products/fruits/17.png",
         },
         {
-          name_en: "Lichi",
+          name_en: "Lychee",
           name_ru: "Личи",
           name_uz: "Lichi",
           img: "/products/fruits/18.png",
