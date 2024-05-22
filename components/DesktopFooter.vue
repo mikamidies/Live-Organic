@@ -38,7 +38,7 @@
               </p>
               <p class="txt">
                 <span v-if="$route.params.lang == 'ru'">
-                  Город Ташкент, Бектемирский район, ул. Мехтабад 82. Комплекс" FOOD CITY TASHKENT"
+                  Город Ташкент, Бектемирский район, ул. Мехнатабад 82. Комплекс" FOOD CITY TASHKENT"
                 </span>
                 <span v-if="$route.params.lang == 'en'">
                   Tashkent City, Bektemir district, Mehnatabad Street 82. "FOOD CITY TASHKENT" complex
