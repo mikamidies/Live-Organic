@@ -3,6 +3,9 @@
         <transition name="home">
             <div v-if="loading" class="loading">
                 <img class="pic" src="@/assets/img/logo/loader.png" alt="">
+                <p class="pip">
+                    BlissBerry
+                </p>
             </div>
         </transition>
     </div>
@@ -68,10 +71,18 @@ export default {
     height: 100%;
     background: white;
     display: flex;
+    flex-direction: column;
+    gap: 16px;
     align-items: center;
     justify-content: center;
     z-index: 99999;
     background: var(--green)
+}
+
+.pip {
+    font-family: "ALOHA";
+    font-size: 64px;
+    color: white;
 }
 
 svg {
@@ -145,6 +156,10 @@ svg path.red {
 @media screen and (max-width: 1024px) {
     .pic {
         width: 140px;
+    }
+
+    .pip {
+        font-size: 48px;
     }
 }
 </style>

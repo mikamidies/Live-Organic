@@ -274,7 +274,7 @@ export default {
 
   .bottom {
     position: fixed;
-    top: 72px;
+    top: 92px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -297,7 +297,7 @@ export default {
   }
 
   .left img {
-    width: 120px;
+    width: 160px;
   }
 
   .burger {

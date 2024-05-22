@@ -24,6 +24,11 @@
   src: url(../fonts/RFDewiExtended-Bold.ttf);
 }
 
+@font-face {
+  font-family: "ALOHA";
+  src: url(../fonts/Adoha.otf);
+}
+
 :root {
   --light: "Interfaces-300";
   --regular: "Interfaces";
