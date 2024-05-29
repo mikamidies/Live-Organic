@@ -30,7 +30,7 @@
           </div>
           <div class="item">
             <p class="sup">Email:</p>
-            <a :href="`mailto:M.abdullaev@blissberry.uz`" class="value">M.abdullaev@blissberry.uz</a>
+            <a :href="`mailto:blissberryuz@gmail.com`" class="value">blissberryuz@gmail.com</a>
           </div>
           <div class="item">
             <p class="sup">
