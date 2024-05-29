@@ -26,7 +26,7 @@
 
               <div class="item">
                 <p class="sup">Email</p>
-                <a href="mailto:M.abdullaev@blissberry.uz" class="txt nelly"> M.abdullaev@blissberry.uz </a>
+                <a href="mailto:blissberryuz@gmail.com" class="txt nelly"> blissberryuz@gmail.com </a>
               </div>
             </div>
 
